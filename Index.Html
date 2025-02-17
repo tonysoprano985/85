@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPDA Trading Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e2f;
+            color: #ffffff;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #2a2a40;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #ffcc00;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options {
+            margin-left: 20px;
+        }
+        .submit-btn {
+            background-color: #ffcc00;
+            color: #1e1e2f;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #e6b800;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>IPDA Trading Test</h1>
+        <form id="testForm">
+            <!-- Questions will be inserted here -->
+            <div class="question">
+                <h2>Test 1: Basic IPDA States</h2>
+                <p>1. What are the four key states of price movement highlighted in the document?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A) Consolidation, Expansion, Pullback, Reversal</label><br>
+                    <label><input type="radio" name="q1" value="B"> B) Consolidation, Impulse, Manipulation, Reversal</label><br>
+                    <label><input type="radio" name="q1" value="C"> C) Consolidation, Expansion, Impulse, Pullback</label><br>
+                    <label><input type="radio" name="q1" value="D"> D) Consolidation, Expansion, Manipulation, Reversal</label>
+                </div>
+            </div>
+            <!-- Repeat for other questions -->
+            <button type="button" class="submit-btn" onclick="calculateScore()">Submit</button>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        const correctAnswers = {
+            q1: 'A',
+            q2: 'C',
+            q3: 'B',
+            q4: 'C',
+            q5: 'A',
+            q6: 'A',
+            q7: 'A',
+            q8: 'A',
+            q9: 'A',
+            q10: 'A',
+            q11: 'B',
+            q12: 'B',
+            q13: 'C',
+            q14: 'A',
+            q15: 'D',
+            q16: 'B',
+            q17: 'A',
+            q18: 'A',
+            q19: 'B',
+            q20: 'C',
+            q21: 'A',
+            q22: 'A',
+            q23: 'A',
+            q24: 'B',
+            q25: 'C',
+            q26: 'B',
+            q27: 'A',
+            q28: 'A',
+            q29: 'A',
+            q30: 'A'
+        };
+
+        function calculateScore() {
+            let score = 0;
+            for (let i = 1; i <= 30; i++) {
+                const selected = document.querySelector(input[name="q${i}"]:checked);
+                if (selected && selected.value === correctAnswers[q${i}]) {
+                    score++;
+                }
+            }
+            document.getElementById('result').innerText = Your score is ${score}/30;
+        }
+    </script>
+</body>
+</html>
